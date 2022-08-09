@@ -64,8 +64,7 @@ document.getElementById('bookList').addEventListener('click', (e) => {
 // Sets the datetime in website
 const fecha = document.getElementById('fecha');
 
-function setDate() {
-  // const date = new Date();
+let setDate = () => {
   const date = DateTime.now();
   const newFormat = { ...DateTime.DATETIME_MED_WITH_SECONDS, month: 'long' };
   fecha.innerHTML = date.toLocaleString(newFormat);
