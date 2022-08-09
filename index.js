@@ -64,11 +64,11 @@ document.getElementById('bookList').addEventListener('click', (e) => {
 // Sets the datetime in website
 const fecha = document.getElementById('fecha');
 
-let setDate = () => {
+const setDate = () => {
   const date = DateTime.now();
   const newFormat = { ...DateTime.DATETIME_MED_WITH_SECONDS, month: 'long' };
   fecha.innerHTML = date.toLocaleString(newFormat);
-}
+};
 
 setDate();
 setInterval(setDate, 1000);
